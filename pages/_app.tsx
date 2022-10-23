@@ -1,15 +1,11 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import styles from '../styles/Layout.module.css'
-import Image from 'next/image'
+import '@styles/globals.css'
+import { AppLayout } from '@components/AppLayout'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={styles.bg}>
-      <div className={styles.innerbox}></div>
+    <AppLayout>
       <Component {...pageProps} />
-    </div>
+    </AppLayout>
   )
 }
-
-export default MyApp
