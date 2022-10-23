@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 66px;
+  left: 52px;
+  width: 728px;
+}
+
+.title {
+  font-size: 16px;
+  margin-left: 16px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #55b2d4;
+  flex: 1;
+}
+
+.option_btn {
+  font-size: 11px;
+  letter-spacing: -1px;
+}
+
+.option_btn b {
+  color: #ff6400;
+}
