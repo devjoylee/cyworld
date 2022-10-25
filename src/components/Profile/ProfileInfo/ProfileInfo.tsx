@@ -1,4 +1,4 @@
-import styles from './ProfileInfo.module.css'
+import styles from './ProfileInfo.module.scss'
 
 export const ProfileInfo = () => {
   return (

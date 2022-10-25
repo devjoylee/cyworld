@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.scss'
 
 const nav = [
   { name: '홈', path: '' },

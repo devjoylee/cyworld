@@ -1,6 +1,6 @@
 import { Header, Profile, Contents } from '@components'
 import { Navbar } from '@components/Common'
-import styles from './Layout.module.css'
+import styles from './Layout.module.scss'
 
 interface Props {
   children: React.ReactNode
