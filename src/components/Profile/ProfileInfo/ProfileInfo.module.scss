@@ -2,20 +2,19 @@
   border-top: 1px solid #aaa;
   padding-top: 10px;
   flex: 1;
-}
 
-.profile_info li {
-  font-size: 13px;
-  letter-spacing: -0.5px;
-}
+  li {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    & + li {
+      margin-top: 7px;
+    }
+  }
 
-.profile_info li + li {
-  margin-top: 7px;
-}
-
-.profile_info img {
-  width: 12px;
-  height: 12px;
-  margin-right: 9px;
-  margin-bottom: -2px;
+  img {
+    width: 12px;
+    height: 12px;
+    margin-right: 9px;
+    margin-bottom: -2px;
+  }
 }

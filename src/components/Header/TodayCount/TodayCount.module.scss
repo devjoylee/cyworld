@@ -1,3 +1,5 @@
+@import '@styles/variables.scss';
+
 .today_count {
   display: flex;
   position: relative;
@@ -7,28 +9,30 @@
   justify-content: center;
 }
 
-.today_count li span {
-  display: inline-block;
-  margin-left: 5px;
-}
+.today_count li {
+  & + li {
+    margin-left: 12px;
+    padding-left: 12px;
+    position: relative;
 
-.today_count li + li {
-  margin-left: 12px;
-  padding-left: 12px;
-  position: relative;
-}
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 10px;
+      background: #555;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
 
-.today_count li + li:before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 10px;
-  background: #555;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
+  span {
+    display: inline-block;
+    margin-left: 5px;
+  }
 
-.today span {
-  color: red;
+  &.today span {
+    color: $red-color-1;
+  }
 }
