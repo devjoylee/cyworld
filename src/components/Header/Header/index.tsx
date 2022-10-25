@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import { TodayCount } from './TodayCount'
+import { TodayCount } from '../TodayCount'
 
 export const Header = () => {
   return (
