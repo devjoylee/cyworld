@@ -1,0 +1,15 @@
+.today_feel h3 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.option_box {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: 1px solid #777;
+  font-size: 14px;
+  padding-bottom: 1px;
+  letter-spacing: -1px;
+}

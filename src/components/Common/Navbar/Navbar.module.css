@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 56px;
+  position: absolute;
+  right: -56px;
+  top: 13px;
+}
+
+.navbar a {
+  display: block;
+  height: 34px;
+  line-height: 30px;
+  background: #298eb5;
+  color: #fff;
+  margin-bottom: 3px;
+  font-size: 13px;
+  letter-spacing: -0.8px;
+  text-align: center;
+  border: 1px solid #0f465e;
+  border-left: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.navbar a.active {
+  color: #000;
+  background: #fff;
+}

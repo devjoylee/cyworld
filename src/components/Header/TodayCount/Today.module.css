@@ -1,0 +1,34 @@
+.today_count {
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  width: 208px;
+  justify-content: center;
+}
+
+.today_count li span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.today_count li + li {
+  margin-left: 12px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.today_count li + li:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background: #555;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.today span {
+  color: red;
+}

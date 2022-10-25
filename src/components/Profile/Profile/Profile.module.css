@@ -1,0 +1,22 @@
+.profile {
+  width: 208px;
+  margin-right: 4px;
+}
+
+.myphoto {
+  width: 150px;
+  height: 150px;
+  margin: 7px auto;
+}
+
+.myphoto img {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px;
+}
