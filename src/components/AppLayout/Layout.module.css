@@ -8,6 +8,8 @@
 }
 
 .innerbox {
+  display: flex;
+  flex-direction: column;
   background-image: url('/images/innerbox.png');
   background-position: 20px 20px;
   background-size: 808px 544px;

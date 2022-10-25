@@ -1,4 +1,5 @@
 import { Header, Profile, Contents } from '@components'
+import { Navbar } from '@components/Common'
 import styles from './Layout.module.css'
 
 interface Props {
@@ -13,6 +14,7 @@ export const AppLayout = ({ children }: Props) => {
         <div className={styles.app_container}>
           <Profile />
           <Contents>{children}</Contents>
+          <Navbar />
         </div>
       </div>
     </div>
