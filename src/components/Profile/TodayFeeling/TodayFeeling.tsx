@@ -1,4 +1,4 @@
-import styles from './TodayFeeling.module.css'
+import styles from './TodayFeeling.module.scss'
 
 export const TodayFeeling = () => {
   return (

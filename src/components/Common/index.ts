@@ -1,2 +1,2 @@
-export { SEO } from './SEO'
-export { Navbar } from './Navbar'
+export { SEO } from './SEO/SEO'
+export { Navbar } from './Navbar/Navbar'

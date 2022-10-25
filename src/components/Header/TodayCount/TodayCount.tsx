@@ -1,4 +1,4 @@
-import styles from './Today.module.css'
+import styles from './TodayCount.module.scss'
 
 export const TodayCount = () => {
   return (

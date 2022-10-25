@@ -1,6 +1,5 @@
-import styles from './Profile.module.css'
-import { ProfileInfo } from '../ProfileInfo'
-import { TodayFeeling } from '../TodayFeeling'
+import { ProfileInfo, TodayFeeling } from '@components/Profile'
+import styles from './Profile.module.scss'
 
 export const Profile = () => {
   return (

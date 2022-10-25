@@ -1,3 +1,5 @@
+@import '@styles/variables.scss';
+
 .header {
   display: flex;
   align-items: flex-end;
@@ -12,15 +14,14 @@
   margin-left: 16px;
   font-weight: bold;
   letter-spacing: -1px;
-  color: #55b2d4;
+  color: $main-color-1;
   flex: 1;
 }
 
 .option_btn {
   font-size: 11px;
   letter-spacing: -1px;
-}
-
-.option_btn b {
-  color: #ff6400;
+  b {
+    color: #ff6400;
+  }
 }
