@@ -1,0 +1,9 @@
+@import '@styles/variables.scss';
+
+.section_title {
+  color: $main-color-1;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #aaa;
+}
