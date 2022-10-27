@@ -1,5 +1,5 @@
 import { SEO } from '@components/Common'
-import { HomeNav, LatestDiary } from '@components/Home'
+import { BGMs, HomeNav, LatestDiary } from '@components/Home'
 import styles from './index.module.scss'
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
         <LatestDiary />
         <HomeNav />
       </div>
+      <BGMs />
     </>
   )
 }

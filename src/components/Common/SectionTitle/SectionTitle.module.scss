@@ -1,9 +1,18 @@
 @import '@styles/variables.scss';
 
 .section_title {
+  display: flex;
+  align-items: center;
   color: $main-color-1;
   font-weight: bold;
   font-size: 15px;
   padding-bottom: 1px;
   border-bottom: 2px solid #aaa;
+
+  span {
+    font-size: 10px;
+    color: #000;
+    font-weight: 300;
+    margin-left: 6px;
+  }
 }
