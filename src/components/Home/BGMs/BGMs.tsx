@@ -17,88 +17,31 @@ export const BGMs = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>1</td>
-            <td className={styles.title}>After LIKE</td>
-            <td className={styles.artist}>IVE (아이브)</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>2</td>
-            <td className={styles.title}>사랑스러워</td>
-            <td className={styles.artist}>김종국</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>3</td>
-            <td className={styles.title}>Attention</td>
-            <td className={styles.artist}>NewJeans</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>4</td>
-            <td className={styles.title}>Love Love Love</td>
-            <td className={styles.artist}>에픽하이</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>5</td>
-            <td className={styles.title}>Pink Venom</td>
-            <td className={styles.artist}>BLACKPINK</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>6</td>
-            <td className={styles.title}>눈의꽃</td>
-            <td className={styles.artist}>박효신</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>7</td>
-            <td className={styles.title}>Hype boy</td>
-            <td className={styles.artist}>NewJeans</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>8</td>
-            <td className={styles.title}>FOREVER 1</td>
-            <td className={styles.artist}>소녀시대</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>9</td>
-            <td className={styles.title}>그때 그 순간 그대로</td>
-            <td className={styles.artist}>WSG워너비</td>
-          </tr>
-          <tr>
-            <td className={styles.checkbox}>
-              <input type='checkbox' />
-            </td>
-            <td className={styles.num}>10</td>
-            <td className={styles.title}>애인있어요</td>
-            <td className={styles.artist}>이은미</td>
-          </tr>
+          {BGMList.map(({ id, title, artist }) => (
+            <tr key={id}>
+              <td className={styles.checkbox}>
+                <input type='checkbox' />
+              </td>
+              <td className={styles.num}>{id}</td>
+              <td className={styles.title}>{title}</td>
+              <td className={styles.artist}>{artist}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </section>
   )
 }
+
+const BGMList = [
+  { id: 1, title: 'After LIKE', artist: 'IVE (아이브)' },
+  { id: 2, title: '사랑스러워', artist: '김종국' },
+  { id: 3, title: 'Attention', artist: 'NewJeans' },
+  { id: 4, title: 'Love Love Love', artist: '에픽하이' },
+  { id: 5, title: 'Pink Venom', artist: 'BLACKPINK' },
+  { id: 6, title: '눈의꽃', artist: '박효신' },
+  { id: 7, title: 'Hype boy', artist: 'NewJeans' },
+  { id: 8, title: 'FOREVER 1', artist: '소녀시대' },
+  { id: 8, title: '그때 그 순간 그대로', artist: 'WSG워너비' },
+  { id: 10, title: '애인있어요', artist: '이은미' },
+]
