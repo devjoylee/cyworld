@@ -1,0 +1,43 @@
+.bgm_list {
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 8px;
+    border: none;
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 100%;
+
+  thead {
+    background: #eee;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    text-align: left;
+  }
+
+  tbody td {
+    border-bottom: 1px dotted #999;
+  }
+
+  td,
+  th {
+    padding: 1px 0;
+  }
+
+  .checkbox {
+    width: 50px;
+    text-align: center;
+    padding-top: 1.5px;
+  }
+  .num {
+    width: 50px;
+    text-align: center;
+  }
+  .title {
+    width: 220px;
+    padding-left: 10px;
+  }
+}

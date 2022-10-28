@@ -1,0 +1,29 @@
+@import '@styles/variables.scss';
+
+.home_nav {
+  margin-top: 22px;
+  padding-left: 25px;
+
+  .row {
+    display: flex;
+    border-top: 1px dotted #888;
+    height: 22px;
+    align-items: center;
+    &:last-child {
+      height: 18px;
+      border-bottom: 1px dotted #888;
+    }
+    li {
+      font-size: 10px;
+      letter-spacing: -0.5px;
+      flex-wrap: wrap;
+      &:first-child {
+        flex-basis: 54%;
+      }
+      span {
+        margin-left: 10px;
+        color: $main-color-1;
+      }
+    }
+  }
+}
