@@ -1,5 +1,5 @@
-import { GameSection } from '@components/Game'
 import { useState } from 'react'
+import { GameSection } from '@components/Game'
 import styles from './WordChain.module.scss'
 
 export const WordChain = () => {
