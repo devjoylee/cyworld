@@ -7,10 +7,15 @@
   background-color: #f6f6f6;
   padding: 20px 0px;
   text-align: center;
+  font-size: 13px;
+  letter-spacing: -0.5px;
 
   h3 {
-    font-size: 13px;
     font-weight: bold;
-    letter-spacing: -0.5px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
