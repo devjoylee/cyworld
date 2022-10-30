@@ -1,0 +1,46 @@
+.word_chain {
+  h3 {
+    margin-top: 6px;
+  }
+  p {
+    margin: 6px 0 8px;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+  }
+  .input_wrap {
+    display: flex;
+    padding: 0 13px;
+    margin-bottom: 7px;
+    input {
+      font-size: 12px;
+      background-color: white;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 3px 5px;
+      outline: none;
+      flex: 1;
+      &::placeholder {
+        font-size: 11px;
+      }
+    }
+    button {
+      margin-left: 8px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #fff;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.1s ease 0s;
+
+      &:hover {
+        background: #aaa;
+        color: #fff;
+      }
+    }
+  }
+}
