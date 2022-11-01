@@ -1,4 +1,5 @@
 import { Diary } from '@types'
+import { getDate } from '@utils'
 import styles from './DiaryItem.module.scss'
 
 interface Props {
@@ -11,7 +12,7 @@ export const DiaryItem = ({ diaryData }: Props) => {
   return (
     <li key={number} className={styles.diary}>
       <div className={styles.content}>
-        <span>2022-11-01</span>
+        <span>{getDate(createdAt)}</span>
         <h3>제목 : {title}</h3>
       </div>
       <button>자세히 보러가기&nbsp;</button>
