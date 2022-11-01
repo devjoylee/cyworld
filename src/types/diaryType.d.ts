@@ -1,5 +1,5 @@
-export interface DiaryList {
+export interface Diary {
   title: string
   number: number
-  createdAt: Date
+  createdAt: string
 }

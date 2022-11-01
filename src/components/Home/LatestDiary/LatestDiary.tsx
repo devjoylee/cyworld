@@ -1,12 +1,12 @@
 import { useQuery } from '@apollo/client'
 import { GET_DIARY_LIST } from '@queries/diary'
 import { SectionTitle } from '@components/Common'
-import { DiaryList } from '@types'
+import { Diary } from '@types'
 import styles from './LatestDiary.module.scss'
 
 export const LatestDiary = () => {
-  const { data, loading, error } = useQuery(GET_DIARY_LIST, { variables: { page: 1 } })
-  const latest = !loading ? (data.fetchBoards.slice(0, 4) as DiaryList[]) : []
+  const { data, loading } = useQuery(GET_DIARY_LIST, { variables: { page: 1 } })
+  const latest = !loading ? (data.fetchBoards.slice(0, 4) as Diary[]) : []
 
   return (
     <section className={styles.latest_diary}>
