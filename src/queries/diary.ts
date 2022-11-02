@@ -9,3 +9,14 @@ export const GET_DIARY_LIST = gql`
     }
   }
 `
+
+export const GET_DIARY_ITEM = gql`
+  query FetchBoard($number: Int!) {
+    fetchBoard(number: $number) {
+      title
+      createdAt
+      contents
+      number
+    }
+  }
+`
