@@ -14,7 +14,7 @@
   .content {
     display: flex;
     flex-direction: column;
-    height: 270px;
+    height: 268px;
     border: 1px solid $gray-color-5;
     margin-bottom: 10px;
 
@@ -28,20 +28,6 @@
       padding: 25px 50px;
       font-size: 14px;
       color: $gray-color-1;
-    }
-  }
-
-  a {
-    font-size: 13px;
-    font-weight: 600;
-    color: $gray-color-1;
-    text-decoration: underline;
-
-    &::before {
-      content: '<';
-      top: -1px;
-      font-size: 14px;
-      position: relative;
     }
   }
 }

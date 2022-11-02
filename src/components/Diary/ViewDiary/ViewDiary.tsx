@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Diary } from '@types'
 import { getDate } from '@utils'
 import styles from './ViewDiary.module.scss'
@@ -17,7 +16,6 @@ export const ViewDiary = ({ diaryData }: Props) => {
         <h3>{title}</h3>
         <p>{contents}</p>
       </div>
-      <Link href='/diary'> 목록으로</Link>
     </section>
   )
 }

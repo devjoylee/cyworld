@@ -7,6 +7,23 @@
   right: 30px;
 }
 
+.btn1 {
+  @include btn1;
+}
+
 .btn2 {
   @include btn2;
+}
+
+.back_btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: $gray-color-1;
+  text-decoration: underline;
+  &::before {
+    content: '<';
+    top: -1px;
+    font-size: 14px;
+    position: relative;
+  }
 }

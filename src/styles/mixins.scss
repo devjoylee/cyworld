@@ -16,6 +16,23 @@
   }
 }
 
+@mixin btn1 {
+  width: 70px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  color: $gray-color-1;
+  background-color: $gray-color-4;
+  transition: all 0.1s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background: #aaa;
+    color: #fff;
+  }
+}
+
 @mixin btn2 {
   width: 70px;
   height: 24px;
