@@ -1,3 +1,6 @@
 export { DiaryList } from './DiaryList/DiaryList'
 export { DiaryItem } from './DiaryItem/DiaryItem'
 export { ViewDiary } from './ViewDiary/ViewDiary'
+export { NewDiary } from './NewDiary/NewDiary'
+export { NewDiaryButton } from './Buttons/NewDiaryButton'
+export { SubmitButton } from './Buttons/SubmitButton'
