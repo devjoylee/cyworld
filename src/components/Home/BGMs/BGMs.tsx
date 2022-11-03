@@ -42,6 +42,6 @@ const BGMList = [
   { id: 6, title: '눈의꽃', artist: '박효신' },
   { id: 7, title: 'Hype boy', artist: 'NewJeans' },
   { id: 8, title: 'FOREVER 1', artist: '소녀시대' },
-  { id: 8, title: '그때 그 순간 그대로', artist: 'WSG워너비' },
+  { id: 9, title: '그때 그 순간 그대로', artist: 'WSG워너비' },
   { id: 10, title: '애인있어요', artist: '이은미' },
 ]

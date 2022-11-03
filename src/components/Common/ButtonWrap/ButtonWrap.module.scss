@@ -1,0 +1,16 @@
+@import '@styles/variables.scss';
+
+.btn_wrap {
+  margin: 15px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button + button {
+    margin-left: 28px;
+  }
+
+  a {
+    display: block;
+  }
+}

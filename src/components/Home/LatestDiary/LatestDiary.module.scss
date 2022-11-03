@@ -1,5 +1,21 @@
-.latest_diary {
-  h2 {
-    margin-right: -13px;
+.latest_diary h2 {
+  margin-right: -13px;
+}
+
+.diary_list {
+  height: 80px;
+  margin-top: 4px;
+  margin-left: 3px;
+  li {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 35px;
+      margin-right: 5px;
+    }
+    & + li {
+      margin-top: 5px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import '@styles/mixins.scss';
+
 .word_chain {
   h3 {
     margin-top: 6px;
@@ -14,8 +16,10 @@
     display: flex;
     padding: 0 13px;
     margin-bottom: 7px;
+
     input {
       font-size: 12px;
+      margin-right: 8px;
       background-color: white;
       border: 1px solid #aaa;
       border-radius: 5px;
@@ -26,21 +30,10 @@
         font-size: 11px;
       }
     }
-    button {
-      margin-left: 8px;
-      padding: 5px 8px;
-      font-size: 11px;
-      font-weight: 600;
-      background: #fff;
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.1s ease 0s;
 
-      &:hover {
-        background: #aaa;
-        color: #fff;
-      }
+    button {
+      @include btn;
+      padding: 5px 8px;
     }
   }
 }
