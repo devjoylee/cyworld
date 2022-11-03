@@ -9,10 +9,27 @@
   padding-bottom: 3px;
   border-bottom: 1px solid #aaa;
 
-  span {
+  .subtitle {
     font-size: 10px;
     color: #000;
     font-weight: 300;
     margin-left: 6px;
+  }
+
+  .diary {
+    font-size: 13px;
+    letter-spacing: -1px;
+    padding-left: 7px;
+    margin-left: 7px;
+    position: relative;
+    &:before {
+      content: '';
+      height: 80%;
+      width: 1.5px;
+      top: 3px;
+      left: 0;
+      background: $main-color-1;
+      position: absolute;
+    }
   }
 }

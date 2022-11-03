@@ -45,7 +45,7 @@ export default function DiaryNew() {
   return (
     <>
       <SEO title='DIARY' />
-      <SectionTitle title='Diary | 글 등록' />
+      <SectionTitle title='Diary' diary='글 등록' />
       <NewDiary handleChange={handleChange} diary={diary} />
       <SubmitButton handleSubmit={handleSubmit} />
     </>
