@@ -9,7 +9,7 @@ interface Props {
 export const DiaryList = ({ diaryData }: Props) => {
   return (
     <ul className={styles.diary_list}>
-      {diaryData.map((data) => (
+      {diaryData?.map((data) => (
         <DiaryItem key={data.number} diaryData={data} />
       ))}
     </ul>
