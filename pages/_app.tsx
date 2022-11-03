@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
-import { AppLayout } from '@components/AppLayout'
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import { AppLayout } from '@components'
 import '@styles/globals.scss'
 
 const client = new ApolloClient({

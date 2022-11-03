@@ -1,6 +1,6 @@
-import { Header, Profile, Contents } from '@components'
-import { Navbar } from '@components/Common'
-import styles from './Layout.module.scss'
+import { Header, Profile } from '@components'
+import { ContentWrap, Navbar } from '@components/Common'
+import styles from './AppLayout.module.scss'
 
 interface Props {
   children: React.ReactNode
@@ -13,7 +13,7 @@ export const AppLayout = ({ children }: Props) => {
         <Header />
         <div className={styles.app_container}>
           <Profile />
-          <Contents>{children}</Contents>
+          <ContentWrap>{children}</ContentWrap>
           <Navbar />
         </div>
       </div>

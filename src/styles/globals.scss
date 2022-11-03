@@ -7,7 +7,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, sans-serif;
+  font-family: sans-serif;
+  color: #000;
 }
 h1,
 h2,
@@ -45,16 +46,6 @@ textarea {
   background: none;
   line-height: 1;
   font: inherit;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
 
 .container {
