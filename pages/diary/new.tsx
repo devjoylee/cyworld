@@ -1,32 +1,19 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
 import { SectionTitle, SEO } from '@components/Common'
 import { SubmitButton, TextEditor } from '@components/Diary'
-import { useId } from '@hooks/useId'
+import { usePost } from '@hooks/usePost'
 import * as Q from '@queries/diary'
 
 export default function DiaryNew() {
   const router = useRouter()
-  const newId = useId()
-  const [diary, setDiary] = useState({ title: '', contents: '' })
+  const { diary, handleChange, validate } = usePost()
   const [createDiary] = useMutation(Q.CREATE_DIARY)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setDiary({
-      ...diary,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   const handleSubmit = async () => {
-    if (!diary.title) {
-      alert('제목을 입력하세요')
-    } else if (!diary.contents) {
-      alert('내용을 입력하세요')
-    } else {
+    if (validate()) {
       try {
-        await createDiary({
+        const result = await createDiary({
           variables: {
             writer: 'Joy',
             title: diary.title,
@@ -34,10 +21,9 @@ export default function DiaryNew() {
           },
           onCompleted: () => {
             alert('다이어리 등록 성공!')
-            router.push(`/diary/${newId}`)
           },
-          refetchQueries: [{ query: Q.GET_DIARY_LIST }],
         })
+        router.push(`/diary/${result.data.createBoard.number}`)
         //
       } catch (error) {
         alert('문제가 발생했습니다')

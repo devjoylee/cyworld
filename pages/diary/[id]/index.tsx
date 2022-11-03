@@ -10,8 +10,10 @@ export default function DiaryContent() {
   const id = router.query.id as string
 
   // Fetching diary contents
-  const { data } = useQuery(Q.GET_DIARY_ITEM, { variables: { number: Number(id) } })
-  const diaryData = data?.fetchBoard as Diary
+  const { data, loading } = useQuery(Q.GET_DIARY_ITEM, {
+    variables: { number: Number(id) },
+  })
+  const diaryData = !loading && data ? (data?.fetchBoard as Diary) : defaultContent
 
   // Deleting diary contents
   const [deleteDiary] = useMutation(Q.DELETE_DIARY)
@@ -32,7 +34,7 @@ export default function DiaryContent() {
     <>
       <SEO title='DIARY' />
       <SectionTitle title='Diary' />
-      {<ViewDiary diaryData={diaryData || defaultContent} />}
+      <ViewDiary diaryData={diaryData} />
       <EditDeleteButton id={id} deleteDiary={deleteAction} />
     </>
   )
