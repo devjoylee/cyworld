@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useMutation, useQuery } from '@apollo/client'
-import { GET_DIARY_ITEM, UPDATE_DIARY } from '@queries/diary'
 import { SectionTitle, SEO } from '@components/Common'
 import { SubmitButton, TextEditor } from '@components/Diary'
 import { Diary } from '@types'
+import * as Q from '@queries/diary'
 
 export default function DiaryEdit() {
   const router = useRouter()
@@ -12,11 +12,11 @@ export default function DiaryEdit() {
   const [diary, setDiary] = useState({ title: '', contents: '' })
 
   // Fetching diary contents
-  const { data, loading } = useQuery(GET_DIARY_ITEM, {
+  const { data, loading, refetch } = useQuery(Q.GET_DIARY_ITEM, {
     variables: { number: Number(id) },
   })
 
-  const [updateDiary] = useMutation(UPDATE_DIARY)
+  const [updateDiary] = useMutation(Q.UPDATE_DIARY)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setDiary({
@@ -39,9 +39,13 @@ export default function DiaryEdit() {
             title: diary.title,
             contents: diary.contents,
           },
+          onCompleted: () => {
+            alert('게시물 수정에 성공했습니다!')
+            refetch()
+            router.push(`/diary/${id}`)
+          },
+          refetchQueries: [{ query: Q.GET_DIARY_LIST }],
         })
-        alert('게시물 수정에 성공했습니다!')
-        router.push(`/diary/${id}`)
         //
       } catch (error) {
         alert('문제가 발생했습니다')

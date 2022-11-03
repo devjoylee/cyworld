@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
-import { CREATE_DIARY } from '@queries/diary'
 import { SectionTitle, SEO } from '@components/Common'
 import { SubmitButton, TextEditor } from '@components/Diary'
 import { useId } from '@hooks/useId'
+import * as Q from '@queries/diary'
 
 export default function DiaryNew() {
   const router = useRouter()
   const newId = useId()
   const [diary, setDiary] = useState({ title: '', contents: '' })
-  const [createDiary] = useMutation(CREATE_DIARY)
+  const [createDiary] = useMutation(Q.CREATE_DIARY)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setDiary({
@@ -32,9 +32,12 @@ export default function DiaryNew() {
             title: diary.title,
             contents: diary.contents,
           },
+          onCompleted: () => {
+            alert('다이어리 등록 성공!')
+            router.push(`/diary/${newId}`)
+          },
+          refetchQueries: [{ query: Q.GET_DIARY_LIST }],
         })
-        alert('다이어리 등록 성공!')
-        router.push(`/diary/${newId}`)
         //
       } catch (error) {
         alert('문제가 발생했습니다')
