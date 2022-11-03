@@ -20,3 +20,13 @@ export const GET_DIARY_ITEM = gql`
     }
   }
 `
+
+export const CREATE_DIARY = gql`
+  mutation CreateBoard($writer: String!, $title: String!, $contents: String!) {
+    createBoard(writer: $writer, title: $title, contents: $contents) {
+      _id
+      number
+      message
+    }
+  }
+`
