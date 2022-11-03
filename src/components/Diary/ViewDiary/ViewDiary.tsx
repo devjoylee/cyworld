@@ -11,7 +11,7 @@ export const ViewDiary = ({ diaryData }: Props) => {
 
   return (
     <section className={styles.view_diary}>
-      <div className={styles.date}>{getDate(createdAt)}</div>
+      <div className={styles.date}>{getDate(createdAt as string)}</div>
       <div className={styles.content}>
         <h3>{title}</h3>
         <p>{contents}</p>

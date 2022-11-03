@@ -1,9 +1,10 @@
 import Head from 'next/head'
 
 export const SEO = ({ title }: { title: string }) => {
+  const text = title + ' | Cyworld via Numble'
   return (
     <Head>
-      <title>{title} | Cyworld via Numble</title>
+      <title>{text}</title>
     </Head>
   )
 }

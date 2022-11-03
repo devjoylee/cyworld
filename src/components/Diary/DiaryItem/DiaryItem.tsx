@@ -14,7 +14,7 @@ export const DiaryItem = ({ diaryData }: Props) => {
   return (
     <li key={number} className={styles.diary}>
       <div className={styles.content}>
-        <span>{getDate(createdAt)}</span>
+        <span>{getDate(createdAt as string)}</span>
         <h3>제목 : {title}</h3>
       </div>
       <Link href={linkTo}>

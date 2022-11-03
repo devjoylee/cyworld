@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { useMutation } from '@apollo/client'
+import { useMutation, useQuery } from '@apollo/client'
 import { SectionTitle, SEO } from '@components/Common'
 import { SubmitButton, TextEditor } from '@components/Diary'
-import { useId } from '@hooks/useId'
+import { Diary } from '@types'
 import * as Q from '@queries/diary'
 
-export default function DiaryNew() {
+export default function DiaryEdit() {
   const router = useRouter()
-  const newId = useId()
+  const id = router.query.id as string
   const [diary, setDiary] = useState({ title: '', contents: '' })
-  const [createDiary] = useMutation(Q.CREATE_DIARY)
+
+  // Fetching diary contents
+  const { data, loading, refetch } = useQuery(Q.GET_DIARY_ITEM, {
+    variables: { number: Number(id) },
+  })
+
+  const [updateDiary] = useMutation(Q.UPDATE_DIARY)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setDiary({
@@ -26,15 +32,17 @@ export default function DiaryNew() {
       alert('내용을 입력하세요')
     } else {
       try {
-        await createDiary({
+        await updateDiary({
           variables: {
+            number: Number(id),
             writer: 'Joy',
             title: diary.title,
             contents: diary.contents,
           },
           onCompleted: () => {
-            alert('다이어리 등록 성공!')
-            router.push(`/diary/${newId}`)
+            alert('게시물 수정에 성공했습니다!')
+            refetch()
+            router.push(`/diary/${id}`)
           },
           refetchQueries: [{ query: Q.GET_DIARY_LIST }],
         })
@@ -45,12 +53,27 @@ export default function DiaryNew() {
     }
   }
 
+  useEffect(() => {
+    const diaryData = !loading ? (data.fetchBoard as Diary) : defaultContent
+    setDiary({
+      title: diaryData.title,
+      contents: diaryData.contents,
+    })
+  }, [data, loading])
+
   return (
     <>
       <SEO title='DIARY' />
-      <SectionTitle title='Diary' diary='글 등록' />
+      <SectionTitle title='Diary' diary='글 수정' />
       <TextEditor handleChange={handleChange} diary={diary} />
-      <SubmitButton type='add' handleSubmit={handleSubmit} />
+      <SubmitButton type='edit' handleSubmit={handleSubmit} />
     </>
   )
+}
+
+const defaultContent = {
+  title: '',
+  contents: '',
+  number: 0,
+  createdAt: '',
 }
