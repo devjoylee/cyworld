@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- PROJECT LOGO -->
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/68415905/199704645-1a449c3c-a2b5-4e32-8f5c-1f8f7c1d22ce.png" alt="Logo" width="50" >
+  <h1>Cyworld Clone Project</h1>
+  <p>
+    <a href="https://cyworld-nb.vercel.app/">배포 주소 바로가기</a>
+    ·
+    <a href="https://devjoylee.github.io/cyworld">프로젝트 회고 바로가기</a>
+  </p>
+</div>
 
-## Getting Started
+<!-- TABLE OF CONTENTS -->
+<details align="right">
+  <summary>Table of Contents</summary>
+    <div><a href="#프로젝트-소개">프로젝트 소개</a></div>
+    <div><a href="#기술-스택">기술 스택</a></div>
+    <div><a href="#프로젝트-구현-사항">프로젝트 구현 사항</a></div>
+    <div><a href="#커밋-컨벤션">커밋 컨벤션</a></div>
+</details>
 
-First, run the development server:
+## 프로젝트 소개
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> NextJS와 GraphQL로 빌드한 싸이월드 클론 프로젝트
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 제작 기간 : 2022.10.14 - 2022.11.03
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 기술 스택
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white"/>&nbsp;&nbsp;<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">&nbsp;&nbsp;<img src="https://img.shields.io/badge/graphql-E10098?style=for-the-badge&logo=graphql&logoColor=white">
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+## 프로젝트 구현 사항
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+graphql에 특화된 라이브러리인 apollo로 API 데이터 사용
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- C : `createBoard`
+- R : `fetchBoard`(single) / `fetchBoards`(list)
+- U : `updateBoard`
+- D : `deleteBoard`
 
-## Deploy on Vercel
+<br/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 커밋 컨벤션
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| 깃모지 | 사용 예시               |
+| ------ | ----------------------- |
+| 🎉     | init                    |
+| 🚚     | 디렉토리 또는 파일 이동 |
+| ✨     | 기능 구현               |
+| 💄     | CSS 스타일링            |
+| ♻️     | 리팩토링                |
+| 📝     | Readme 수정             |
+| ➕     | 모듈 추가               |
+| 🐛     | 버그 해결               |
+| 🚑️    | 치명적인 오류 해결      |
+
+출처 : 깃모지(http://gitmoji.dev/)
+
+<br/>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
