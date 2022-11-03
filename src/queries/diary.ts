@@ -30,3 +30,13 @@ export const CREATE_DIARY = gql`
     }
   }
 `
+
+export const DELETE_DIARY = gql`
+  mutation DeleteBoard($number: Int!) {
+    deleteBoard(number: $number) {
+      _id
+      number
+      message
+    }
+  }
+`
