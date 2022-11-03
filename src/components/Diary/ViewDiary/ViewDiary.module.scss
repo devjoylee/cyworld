@@ -27,9 +27,10 @@
     }
     p {
       flex: 1;
-      padding: 25px 50px;
+      margin: 25px 50px;
       font-size: 14px;
       color: $gray-color-1;
+      overflow: auto;
     }
   }
 }
