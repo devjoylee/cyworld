@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useMutation } from '@apollo/client'
 import { CREATE_DIARY } from '@queries/diary'
 import { SectionTitle, SEO } from '@components/Common'
-import { NewDiary, SubmitButton } from '@components/Diary'
+import { SubmitButton, TextEditor } from '@components/Diary'
 import { useId } from '@hooks/useId'
 
 export default function DiaryNew() {
@@ -20,18 +20,18 @@ export default function DiaryNew() {
   }
 
   const handleSubmit = async () => {
-    const writer = 'Joy'
-    const title = diary.title
-    const contents = diary.contents
-
-    if (!title) {
+    if (!diary.title) {
       alert('제목을 입력하세요')
-    } else if (!contents) {
+    } else if (!diary.contents) {
       alert('내용을 입력하세요')
     } else {
       try {
         await mutateTriggerFunction({
-          variables: { writer, title, contents },
+          variables: {
+            writer: 'Joy',
+            title: diary.title,
+            contents: diary.contents,
+          },
         })
         alert('다이어리 등록 성공!')
         router.push(`/diary/${newId}`)
@@ -46,8 +46,8 @@ export default function DiaryNew() {
     <>
       <SEO title='DIARY' />
       <SectionTitle title='Diary' diary='글 등록' />
-      <NewDiary handleChange={handleChange} diary={diary} />
-      <SubmitButton handleSubmit={handleSubmit} />
+      <TextEditor handleChange={handleChange} diary={diary} />
+      <SubmitButton type='add' handleSubmit={handleSubmit} />
     </>
   )
 }

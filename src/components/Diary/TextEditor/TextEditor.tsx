@@ -1,12 +1,12 @@
 import { Diary } from '@types'
-import styles from './NewDiary.module.scss'
+import styles from './TextEditor.module.scss'
 
 interface Props {
   handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
   diary: Diary
 }
 
-export const NewDiary = ({ handleChange, diary }: Props) => {
+export const TextEditor = ({ handleChange, diary }: Props) => {
   return (
     <section className={styles.new_diary}>
       <input
