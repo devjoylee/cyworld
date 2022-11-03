@@ -10,7 +10,7 @@ export default function DiaryNew() {
   const router = useRouter()
   const newId = useId()
   const [diary, setDiary] = useState({ title: '', contents: '' })
-  const [mutateTriggerFunction] = useMutation(CREATE_DIARY)
+  const [createDiary] = useMutation(CREATE_DIARY)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setDiary({
@@ -26,7 +26,7 @@ export default function DiaryNew() {
       alert('내용을 입력하세요')
     } else {
       try {
-        await mutateTriggerFunction({
+        await createDiary({
           variables: {
             writer: 'Joy',
             title: diary.title,

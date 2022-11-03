@@ -16,7 +16,7 @@ export default function DiaryEdit() {
     variables: { number: Number(id) },
   })
 
-  const [mutateTriggerFunction] = useMutation(UPDATE_DIARY)
+  const [updateDiary] = useMutation(UPDATE_DIARY)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setDiary({
@@ -32,7 +32,7 @@ export default function DiaryEdit() {
       alert('내용을 입력하세요')
     } else {
       try {
-        await mutateTriggerFunction({
+        await updateDiary({
           variables: {
             number: Number(id),
             writer: 'Joy',

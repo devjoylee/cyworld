@@ -13,14 +13,13 @@ export default function DiaryContent() {
   const { data, loading } = useQuery(GET_DIARY_ITEM, {
     variables: { number: Number(id) },
   })
-  const contents = !loading ? (data.fetchBoard as Diary) : defaultContent
+  const contents = data?.fetchBoard as Diary
 
   // Deleting diary contents
-  const [mutateTriggerFunction] = useMutation(DELETE_DIARY)
-  const deleteDiary = async () => {
+  const [deleteDiary] = useMutation(DELETE_DIARY)
+  const deleteAction = async () => {
     if (confirm('다이어리를 삭제하시겠습니까?')) {
-      await mutateTriggerFunction({ variables: { number: Number(id) } })
-      alert('삭제 성공!')
+      await deleteDiary({ variables: { number: Number(id) } })
       router.push('/diary')
     }
   }
@@ -29,8 +28,8 @@ export default function DiaryContent() {
     <>
       <SEO title='DIARY' />
       <SectionTitle title='Diary' />
-      <ViewDiary diaryData={contents} />
-      <EditDeleteButton id={id} deleteDiary={deleteDiary} />
+      {<ViewDiary diaryData={contents || defaultContent} />}
+      <EditDeleteButton id={id} deleteDiary={deleteAction} />
     </>
   )
 }

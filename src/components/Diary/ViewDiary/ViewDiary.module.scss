@@ -4,11 +4,13 @@
   margin-top: 7px;
 
   .date {
+    height: 32px;
+    line-height: 32px;
     letter-spacing: -0.5px;
     font-size: 15px;
     color: $gray-color-1;
     background-color: $gray-color-5;
-    padding: 6px 17px;
+    padding: 0 17px;
   }
 
   .content {
