@@ -1,7 +1,33 @@
 import { SectionTitle } from '@components/Common'
+import { useState } from 'react'
 import styles from './BGMs.module.scss'
 
 export const BGMs = () => {
+  const [checkedList, setCheckedList] = useState<string[]>([])
+  const [isSelectedAll, setIsSelectedAll] = useState(false)
+
+  const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { checked } = e.target
+
+    setIsSelectedAll((prev) => !prev)
+    if (checked) {
+      setCheckedList(BGMList.map((item) => item.id + ''))
+    } else {
+      setCheckedList([])
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, checked } = e.target
+
+    if (checked) {
+      setCheckedList([...checkedList, id])
+    } else {
+      setCheckedList(checkedList.filter((item) => item !== id))
+      setIsSelectedAll(false)
+    }
+  }
+
   return (
     <section className={styles.bgm_list}>
       <SectionTitle title='추억의 BGM' subtitle='TODAY MUSIC' />
@@ -9,7 +35,12 @@ export const BGMs = () => {
         <thead>
           <tr>
             <th className={styles.checkbox}>
-              <input type='checkbox' />
+              <input
+                type='checkbox'
+                id='selectAll'
+                checked={isSelectedAll}
+                onChange={handleSelectAll}
+              />
             </th>
             <th className={styles.num}>번호</th>
             <th className={styles.title}>곡명</th>
@@ -20,7 +51,12 @@ export const BGMs = () => {
           {BGMList.map(({ id, title, artist }) => (
             <tr key={id}>
               <td className={styles.checkbox}>
-                <input type='checkbox' />
+                <input
+                  type='checkbox'
+                  id={id + ''}
+                  onChange={handleChange}
+                  checked={checkedList.includes(id + '')}
+                />
               </td>
               <td className={styles.num}>{id}</td>
               <td className={styles.title}>{title}</td>
