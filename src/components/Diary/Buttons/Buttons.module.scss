@@ -20,6 +20,7 @@
   font-weight: 600;
   color: $gray-color-1;
   text-decoration: underline;
+  cursor: pointer;
   &::before {
     content: '<';
     top: -1px;

@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 import styles from './Navbar.module.scss'
 
 const nav = [
-  { name: '홈', path: '' },
-  { name: '게임', path: 'game' },
-  { name: '다이어리', path: 'diary' },
+  { name: 'HOME', path: '' },
+  { name: 'GAME', path: 'game' },
+  { name: 'DIARY', path: 'diary' },
 ]
 
 export const Navbar = () => {

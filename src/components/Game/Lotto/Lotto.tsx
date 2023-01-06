@@ -26,10 +26,10 @@ export const Lotto = () => {
   return (
     <GameSection
       name='LOTTO'
-      img='https://codecampnumble.shop/images/lotto.png'
+      img='https://media.istockphoto.com/id/460783997/vector/lottery-close.jpg?s=612x612&w=0&k=20&c=k5koZqUgDfeXcZSVcYoAqZ27lgKATXVyvhuiSldBItY='
       className={styles.lotto}
     >
-      <p>버튼을 누르세요</p>
+      <p>Click the button</p>
       <ul>
         {lotto.map((n) => (
           <li key={n}>{n}</li>

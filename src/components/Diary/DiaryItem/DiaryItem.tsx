@@ -15,10 +15,10 @@ export const DiaryItem = ({ diaryData }: Props) => {
     <li key={number} className={styles.diary}>
       <div className={styles.content}>
         <span>{getDate(createdAt as string)}</span>
-        <h3>제목 : {title}</h3>
+        <h3>Title : {title}</h3>
       </div>
       <Link href={linkTo}>
-        <button>자세히 보러가기&nbsp;</button>
+        <button>Read More&nbsp;</button>
       </Link>
     </li>
   )

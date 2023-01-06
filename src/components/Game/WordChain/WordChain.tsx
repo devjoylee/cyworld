@@ -3,34 +3,34 @@ import { GameSection } from '@components/Game'
 import styles from './WordChain.module.scss'
 
 export const WordChain = () => {
-  const [keyword, setKeyword] = useState('코드캠프')
+  const [keyword, setKeyword] = useState('hello')
   const [value, setValue] = useState('')
-  const [result, setResult] = useState('결과!')
+  const [result, setResult] = useState('Result!')
 
   const checkResult = () => {
     if (keyword.slice(-1) === value.slice(0, 1)) {
-      setResult('정답입니다!')
+      setResult('Correct!')
       setKeyword(value)
     } else {
-      setResult('오답입니다!')
+      setResult('Wrong!')
     }
   }
 
   return (
     <GameSection
-      name='끝말잇기'
-      img='https://codecampnumble.shop/images/train.png'
+      name='Word Chain'
+      img='https://www.freeiconspng.com/thumbs/toy-train-png/toy-train-png-23.png'
       className={styles.word_chain}
     >
-      <p>제시어 : {keyword}</p>
+      <p>Keyword : {keyword}</p>
       <div className={styles.input_wrap}>
         <input
           type='text'
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder='단어를 입력하세요.'
+          placeholder='Enter your word.'
         />
-        <button onClick={checkResult}>입력</button>
+        <button onClick={checkResult}>Go</button>
       </div>
       <span>{result}</span>
     </GameSection>

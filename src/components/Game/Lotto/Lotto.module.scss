@@ -2,6 +2,9 @@
 @import '@styles/mixins.scss';
 
 .lotto {
+  h3 {
+    margin-top: 6px;
+  }
   ul {
     display: flex;
     width: 130px;

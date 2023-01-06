@@ -30,14 +30,14 @@ export default function DiaryEdit() {
             contents: diary.contents,
           },
           onCompleted: () => {
-            alert('게시물 수정에 성공했습니다!')
+            alert('Edited successfully!')
             refetch()
             router.push(`/diary/${id}`)
           },
         })
         //
       } catch (error) {
-        alert('문제가 발생했습니다')
+        alert('Something went wrong. Please try again.')
       }
     }
   }
@@ -53,7 +53,7 @@ export default function DiaryEdit() {
   return (
     <>
       <SEO title='DIARY' />
-      <SectionTitle title='Diary' diary='글 수정' />
+      <SectionTitle title='Diary' diary='Edit' />
       <TextEditor handleChange={handleChange} diary={diary} />
       <SubmitButton type='edit' handleSubmit={handleSubmit} />
     </>

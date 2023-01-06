@@ -18,11 +18,11 @@ export default function DiaryContent() {
   // Deleting diary contents
   const [deleteDiary] = useMutation(Q.DELETE_DIARY)
   const deleteAction = async () => {
-    if (confirm('다이어리를 삭제하시겠습니까?')) {
+    if (confirm('Are you sure to delete this?')) {
       await deleteDiary({
         variables: { number: Number(id) },
         onCompleted: () => {
-          alert('삭제 성공!')
+          alert('Deleted successfully!')
           router.push('/diary')
         },
         refetchQueries: [{ query: Q.GET_DIARY_LIST }],

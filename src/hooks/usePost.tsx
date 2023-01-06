@@ -11,9 +11,9 @@ export const usePost = () => {
 
   const validate = () => {
     if (!diary.title) {
-      alert('제목을 입력하세요')
+      alert('Please enter the subject')
     } else if (!diary.contents) {
-      alert('내용을 입력하세요')
+      alert('Please enter the contents')
     }
     return diary.title && diary.contents
   }

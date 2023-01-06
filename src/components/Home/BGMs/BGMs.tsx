@@ -30,7 +30,7 @@ export const BGMs = () => {
 
   return (
     <section className={styles.bgm_list}>
-      <SectionTitle title='추억의 BGM' subtitle='TODAY MUSIC' />
+      <SectionTitle title='My BGM' subtitle='TODAY MUSIC' />
       <table className={styles.table}>
         <thead>
           <tr>

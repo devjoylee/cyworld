@@ -5,18 +5,18 @@ export const HomeNav = () => {
     <section className={styles.home_nav}>
       <ul className={styles.row}>
         <li>
-          다이어리 <span>0/65</span>
+          Diary <span>0/65</span>
         </li>
         <li>
-          사진첩 <span>0/265</span>
+          Photos <span>0/265</span>
         </li>
       </ul>
       <ul className={styles.row}>
         <li>
-          게시판 <span>0/15</span>
+          Board <span>0/15</span>
         </li>
         <li>
-          방명록 <span>0/15</span>
+          Notes <span>0/15</span>
         </li>
       </ul>
       <ul className={styles.row}></ul>

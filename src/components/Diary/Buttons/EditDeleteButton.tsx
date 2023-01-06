@@ -12,14 +12,14 @@ export const EditDeleteButton = ({ id, deleteDiary }: Props) => {
     <>
       <ButtonWrap>
         <button className={styles.btn1}>
-          <Link href={`/diary/${id}/edit`}>수정하기</Link>
+          <Link href={`/diary/${id}/edit`}>Edit</Link>
         </button>
         <button className={styles.btn1} onClick={deleteDiary}>
-          삭제하기
+          Delete
         </button>
       </ButtonWrap>
       <Link href='/diary'>
-        <span className={styles.back_btn}> 목록으로</span>
+        <span className={styles.back_btn}> Back to list</span>
       </Link>
     </>
   )

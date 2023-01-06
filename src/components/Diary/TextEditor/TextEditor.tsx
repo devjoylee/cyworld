@@ -13,7 +13,7 @@ export const TextEditor = ({ handleChange, diary }: Props) => {
         type='text'
         name='title'
         value={diary.title}
-        placeholder='제목을 입력해주세요'
+        placeholder='Subject'
         onChange={handleChange}
       />
       <textarea name='contents' value={diary.contents} onChange={handleChange} />

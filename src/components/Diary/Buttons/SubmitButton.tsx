@@ -11,10 +11,11 @@ export const SubmitButton = ({ type, handleSubmit }: Props) => {
   return (
     <ButtonWrap>
       <button className={styles.btn2} onClick={handleSubmit}>
-        {type === 'add' ? '등록' : '수정'}하기
+        Submit
+        {/* {type === 'add' ? '등록' : '수정'}하기 */}
       </button>
       <button className={styles.btn2}>
-        <Link href='/diary'>취소하기</Link>
+        <Link href='/diary'>Cancel</Link>
       </button>
     </ButtonWrap>
   )

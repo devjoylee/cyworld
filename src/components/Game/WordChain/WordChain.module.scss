@@ -1,9 +1,6 @@
 @import '@styles/mixins.scss';
 
 .word_chain {
-  h3 {
-    margin-top: 6px;
-  }
   p {
     margin: 6px 0 8px;
   }
@@ -15,7 +12,7 @@
   .input_wrap {
     display: flex;
     padding: 0 13px;
-    margin-bottom: 7px;
+    margin-bottom: 2px;
 
     input {
       font-size: 12px;

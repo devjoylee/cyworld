@@ -20,13 +20,13 @@ export default function DiaryNew() {
             contents: diary.contents,
           },
           onCompleted: () => {
-            alert('다이어리 등록 성공!')
+            alert('You have successfully added a new diary!')
           },
         })
         router.push(`/diary/${result.data.createBoard.number}`)
         //
       } catch (error) {
-        alert('문제가 발생했습니다')
+        alert('Something went wrong. Please try again.')
       }
     }
   }
@@ -34,7 +34,7 @@ export default function DiaryNew() {
   return (
     <>
       <SEO title='DIARY' />
-      <SectionTitle title='Diary' diary='글 등록' />
+      <SectionTitle title='Diary' diary='Create' />
       <TextEditor handleChange={handleChange} diary={diary} />
       <SubmitButton type='add' handleSubmit={handleSubmit} />
     </>
